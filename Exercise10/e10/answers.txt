@@ -1,0 +1,37 @@
+1. How long did your reddit_averages.py take with (1) the reddit-0 data set and effectively no work, (2) no schema specified and not caching (on reddit-2 for this and the rest), (3) with a schema but not caching, (4) with both a schema and caching the twice-used DataFrame? [The reddit-0 test is effectively measuring the Spark startup time, so we can see how long it takes to do the actual work on reddit-2 in the best/worst cases.] 
+
+(1) time spark-submit --master=local[1] reddit_averages.py reddit-0 output
+real	0m15.779s
+user	0m39.413s
+sys	0m1.006s
+
+reddit-1 with schema
+real	0m15.915s
+user	0m42.020s
+sys	0m1.065s
+
+(3) reddit-2 with schema, no caching
+real	0m21.823s
+user	0m49.718s
+sys	0m1.141s
+
+(2) reddit-2 without schema, no caching
+real	0m27.162s
+user	0m57.144s
+sys	0m1.296s
+
+reddit-2 with caching, no schema
+real	0m23.832s
+user	0m53.463s
+sys	0m1.199s
+
+(4) reddit-2 with caching and schema
+real	0m18.238s
+user	0m43.480s
+sys	0m1.068s
+
+2. Based on the above, does it look like most of the time taken to process the reddit-2 data set is in reading the files, or calculating the averages?
+
+By examining the timing with reddit-0, it appears that it uses ~16 seconds for effectively no work and mostly reading files. Then by comparing this to the rest of the results, we can see that most of the time is used reading the files.
+
+3. See line 33 for the use of .cache(). It is used for the dataframe after filtering and later joining but before constructing the second dataframe used for joining.

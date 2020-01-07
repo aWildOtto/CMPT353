@@ -1,0 +1,59 @@
+data 1 summary = {'mean_x': 8.717696186413818,
+ 'mean_y': 12.522874034702589,
+ 'std_x': 12.155517231222024,
+ 'std_y': 6.63996400756785,
+ 'range_x': '[-22.635877790008944, 35.23705548785129]',
+ 'range_y': '[-2.5650878326932127, 27.38415261152477]',
+ 'cor_coef': 0.9503256954375483}
+
+ Data 1's correlation coefficient is almost close to 1, indicating an positive linear relationship between x and y.
+
+ data 2 summary = {'mean_x': -0.7107871267159582,
+ 'mean_y': -0.7489869764497992,
+ 'std_x': 11.481583587790732,
+ 'std_y': 6.257917998755848,
+ 'range_x': '[-33.2711130771198, 27.6470003722073]',
+ 'range_y': '[-18.621803760419066, 14.147314992317481]',
+ 'cor_coef': 0.9551531665750375}
+
+Data 2's summary is very similar with data 1, but according to data 2's x and y means, data 2's points are more negative than data 1 while still maintaining a positive linear relationship.
+
+ data 3 summary = {'mean_x': 0.9689074904200942,
+ 'mean_y': 8.50853523664133,
+ 'std_x': 2.23555786105797,
+ 'std_y': 1.1493008110024527,
+ 'range_x': '[-2.4490643296742807, 4.51888491755363]',
+ 'range_y': '[6.641734490391762, 10.551871022804317]',
+ 'cor_coef': 0.9819372646760658}
+
+ Data 3's still maintains a postive linear relationship like data 1 and 2, but data 3's standard deviation of x and y are relatively small indicating that the data points are clustered together.
+
+ data 4 summary = {'mean_x': 49.90508614830509,
+ 'mean_y': 18.55383652542372,
+ 'std_x': 28.50861051988193,
+ 'std_y': 16.545896442941686,
+ 'range_x': '[0.0, 87.3767]',
+ 'range_y': '[0.0, 44.56504]',
+ 'cor_coef': -0.08119306735490814}
+
+ Data 4 has a correlation coefficient of -0.081, which is close to zero, indicating that x and y have close to no relationship with each other and the standard deviation of x and y are relatively large which means its data points are spread apart (if you plot the data it spells SFU).
+
+ data 5 summary = {'mean_x': 49.90999357843096,
+ 'mean_y': 18.55552493772909,
+ 'std_x': 28.500000943801368,
+ 'std_y': 16.540796301840782,
+ 'range_x': '[4.337892453674525, 91.0528633396976]',
+ 'range_y': '[0.05549750758115175, 49.93419703633311]',
+ 'cor_coef': -0.08823598983058889}
+
+ The summary for Data 5 is nearly identical to data 4 except for the ranges, therefore x and y have nearly no relationship and its data points are spread apart.
+
+ data 6 summary = {'mean_x': 7.2161551796099195,
+ 'mean_y': 7.6022150282372944,
+ 'std_x': 11.921599067458313,
+ 'std_y': 11.764382455006647,
+ 'range_x': '[-24.33382075234097, 35.402138910929]',
+ 'range_y': '[-22.9563569970746, 36.07987403078143]',
+ 'cor_coef': 0.9350685662094906}
+
+ Data 6 has a correlation coefficient close to 1 indicating a positive linear relationship, and the x and y means, standard deviations, and rangers are nearly identical which suggest a 1-1 relationship.

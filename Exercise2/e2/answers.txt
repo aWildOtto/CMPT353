@@ -1,0 +1,9 @@
+1. In the hint above, what is the result of the calculation data['timestamp']*fit.slope + fit.intercept? What is the type and describe the values.
+
+The results of this calculation produces a best fit line for the date of the tweet to the rating. This calculation is a linear line with y = mx + b, where y is the result and a preidiction of the rating of a tweet (float value) when the input is the tweet date.
+
+2. In the same hint, why does this produce a fit line on the graph? Why are the created_at values and timestamp values paired correctly to make points on the plot?
+
+In this example the values of created_at and timestamp are considered the same. Values in created_at was convertedt to a datetime object which is then used in a .timestamp() method that produce timestamp data. This timestamp data (float value) is the seconds from a set epoch in python to the date and time of created_at.
+
+The ascending float values of timestamp can now be used to created a fit line on the graph via linear regression method using timestamp and rating.

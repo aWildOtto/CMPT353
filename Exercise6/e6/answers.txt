@@ -1,0 +1,11 @@
+In the A/B test analysis, do you feel like we're p-hacking? How comfortable are you coming to a conclusion at p < 0.05?
+
+Considering that half of the tests had a p < 0.05, I would not be comfortable with a conclusion at p < 0.05. The other two scores were relatively close to < 0.05, but we are only performing a chi-square and Mann-Whitney U test. More tests would be required inorder to conclude a p < 0.05. I do not believe we are p-hacking as each test was performed to have relatively close results and more testing would be required for a more conclusive answer.
+
+If we had done T-tests between each pair of sorting implementation results, how many tests would we run? If we looked for p < 0.05 in them, what would the probability be of having all conclusions correct, just by chance? That's the effective p-value of the many-T-tests analysis. [We could have done a Bonferroni correction when doing multiple T-tests, which is a fancy way of saying “for m tests, look for significance at a/m”.]
+
+In order to run T-tests on each pair of sorting implementations 21 tests would be required. If we do 21 T-tests, the probability of no incorrect rejection of the null is 0.95^21 = ~0.34, then the effective p-value is ~0.67.
+
+Give a ranking of the sorting implementations by speed, including which ones could not be distinguished. (i.e. which pairs could our experiment not conclude had different running times?)
+
+By using the results of our Post Hoc Analysis and runtime means of the sorting algorithms, the rankings of speed from fastest to slowest are as follows: partition sort, qs1, qs4, qs5 & merge1, qs2 & qs3. The pairs of sorting algorithms that could not be distinguished are merge1 & qs5 and qs2 & qs3.

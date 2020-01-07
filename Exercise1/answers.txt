@@ -1,0 +1,14 @@
+1. Where you did the same calculations with NumPy and Pandas, which did you find easier to work with? Which code do you think is easier to read?
+
+I found that both Numpy was easier to use and to read. The functionality and naming of Numpy methods were more familar to me and therefore easier to read and understand. While using Pandas in monthly_totals.py, took a signifcant effort to understand and debug. Perhaps working with an unfamiliar data type could have attributed to the problem.
+
+2. What were the running times of the two pivot_months_ * functions? How can you explain the difference?
+
+The running times of the two pivot_months_* according to jupyter notebook are:
+For pivot_months_pandas(data)
+25.4 ms +- 989 µs per loop
+
+For pivot_months_loops(data)
+884 ms +- 39.1 µs per loop
+
+The difference is due to pivot_months_pandas using Numpy to process data which eliminated the use of loops in Python. Numpy functions are optimized functions to process data, therefore pivot_months_pandas will run faster than its python loop variation.

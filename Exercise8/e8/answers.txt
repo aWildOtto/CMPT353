@@ -1,0 +1,7 @@
+1. Which model did the best for the colour-prediction task? Can you give a theory about why? Do you have any theory about why RGB/LAB/HSV worked better for different models? 
+
+	The kNN model appears to be the overall best for the colour-prediction task, it had the highest score in both RGB model and LAB/HSV model. The kNN models takes multiple training points to make a decision, which allows for a "tighter fit" model versus the bayes model. The random forest model also had similar results to kNN and multiple voting style model. Perhaps the kNN model works better because human's perception of colour also varies and ambiguous colours will have a more "fluid" boundary. Then kNN allows more over-fitting to accomodate the fluid bondary for human's perception of colour. LAB and HSV worked much better than RGB in all models. RGB representation of colour is difficult to make comparisons when converted to numbers, while LAB and HSV have a more linear representation while allows easier comparisons of colours.
+
+2. Have a look at the cities in your validation data where the weather model makes the wrong prediction. Do you feel like the model is making reasonable mistakes? Can you think of any weather features that we could potentially add to make better predictions?
+
+I believe that the model is making reasonable mistakes as the data between the cities with mistakes have very similar data and are relatively close to each other. More weather features should result in better predictions, such as, amount of sunlight, average wind speeds, and atmospheric pressure.

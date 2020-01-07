@@ -1,0 +1,17 @@
+   1.  Which of the four transforms suggested got you the closest to satisfying the assumptions of a T-test?
+
+   Using the sqrt() of the data.
+
+   2.  I gave imprecise English translations of what the by-week test, and the Mann-Whitney test were actually testing. Do the same for the original T-test, and for the transformed data T-test. That is, describe what the conclusion would be if you could reject the null hypothesis in those tests.
+
+   For the original T-test, if we reject the null hypothesis then the mean count of weekday reddit comments have the same mean count as weekend reddit comments. An imprecise translation would be asking if there is a difference in frequency of reddit comments during the weekday versus the weekend.
+
+   If we perform a T-test on the transformed data, assuming we sqrt the data, then by rejecting the null the mean of the sqrt(count) of weekday reddit comments are equal to the mean of the sqrt(count) of weekend reddit comments. Which is the same as the imprecise translation above, which is asking if there is a difference in frequency of reddit comments during the weekday versus the weekend.
+
+   3. Of the four approaches, which do you think actually does a better job of getting an answer for the original question: “are there a different number of Reddit comments posted on weekdays than on weekends?” Briefly explain why. (It's not clear to me that there is a single correct answer to this question.)
+
+   I believe transforming the data would be the best approach to answer the original problem. Transforming the data will strictly keep our question pure without much deviation. While grouping the data weekly and Mann-Whiteney U-test will transform our original question slightly. Strictly comparing the overall mean of each data is more accurate to our original question.
+
+   4.  When are more Reddit comments posted in /r/canada, on average weekdays or weekends? 
+
+   In hindsight, the average comments are higher during the weekday than the weekend. However by accounting for all the tests performed, the answer is inconclusive. Perhaps adding more samples would produce more conclusive results from statistical tests by including additional years.

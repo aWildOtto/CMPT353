@@ -1,0 +1,7 @@
+    1. Looking at your dog-rates.ipynb, do you think the residual are close-enough to being normal to look at the OLS p-value? Can you reasonably conclude that the ratings are increasing?
+
+    Upon inspecting the histogram plot, it appears that the residual are adequately normal and we could further inspect the OLS p-value. With an OLS p-value of 1.5139606492959894e-106, we can conclude that the ratings are increasing over time.
+
+    2. Do you think that the new “better” prediction is letting the Kalman filter do a better job capturing the true signal in the noise? 
+
+    I believe that incorporating this new prediction allows the Kalman filter to better accurately capture the true signal within the noise. It is known that Kalman Filters performs better with a transition matrix that has a relatively accurate prediction. By incorporating the coefficients training model for predicting the next step in our transition matrix, allows us more parameters to manipulate to find a more "true" depiction of the signal.

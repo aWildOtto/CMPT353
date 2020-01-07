@@ -1,0 +1,13 @@
+1. In your reddit_relative.py, what intermediate results did you .cache()? Briefly describe what would have happened if you hadn't used .cache() anywhere.
+
+On line 43 the dataframe averagees was cached. If .cache() wasn't used anywhere then previously used variables would have to be recalculated unnecessarily, thus increasing the total runtime of the program.
+
+How did marking DataFrames for broadcast affect the running time of the “best author” program above?
+
+Without broadcast
+1min20secs
+
+With broadcast
+1min18secs
+
+While observing the running time from frontend YARN, it is unclear if the broadcast has affected the running time. It appears to resulted in a slightly improved running time. Perhaps, if we increase the dataset size there would be more of a noticeable difference.

@@ -1,0 +1,9 @@
+Questions
+
+1. Based on your results for the last question, do you think daily temperatures are a good way to predict population density? Briefly explain why or why not. 
+
+It appears that daily temperatures are not a good way to predict population density. In the results there are no obvious correlation between the two attributes. We can see as the average maximum temperature increases or decreases, it does not appear to have any obvious effects on the population density.
+
+2. The larger data file (stations.json.gz) was kept compressed on disk throughout the analysis. Decompressing every time we run the program seems inefficient. Why might this be faster than working with an uncompressed .json data? 
+
+When we are reading the compressed file on the disk, it is done sequentially because we read the json file line by line to create a dataframe. Perhaps a compressed file has all of its data paged into a pagetable to allow for fast sequential read speeds. Since a compressed file is made up of less bit, the reader physically reads fewer bits. Therefore combining the cache and pagetable, reading a compressed file sequentially could potentially outperform uncompressed reading.
